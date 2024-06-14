@@ -35,5 +35,8 @@
     {
       "path": "./tsconfig.node.json"
     }
+  ],
+  "types": [
+    "vitest/globals"
   ]
 }

@@ -6,7 +6,7 @@ import Filmography from "@/components/Filmography.tsx";
 
 function App() {
     const dispatch = useDispatch();
-    const selectedCategories: string[] = useSelector((state:RootStateType) => state.movies.selectedCategories);
+    const selectedCategories: string[] = useSelector((state: RootStateType) => state.movies.selectedCategories);
     const status: string = useSelector((state: RootStateType) => state.movies.status);
 
     useEffect(() => {
@@ -20,7 +20,7 @@ function App() {
             {status === 'succeeded' && (
                 <>
                     <CategoriesSelect/>
-                    <Filmography />
+                    <Filmography/>
                 </>
             )}
         </div>

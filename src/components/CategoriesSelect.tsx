@@ -5,8 +5,8 @@ import Pagination from "@/components/Pagination.tsx";
 
 export default function CategoriesSelect() {
 
-    const categories: string[] = useSelector((state:RootStateType) => state.movies.categories);
-    const selectedCategories: string[] = useSelector((state:RootStateType) => state.movies.selectedCategories);
+    const categories: string[] = useSelector((state: RootStateType) => state.movies.categories);
+    const selectedCategories: string[] = useSelector((state: RootStateType) => state.movies.selectedCategories);
     const dispatch = useDispatch();
 
     return (
@@ -24,7 +24,7 @@ export default function CategoriesSelect() {
                         </Button>
                     )
                 })}
-                <Pagination />
+                <Pagination/>
             </div>
         </div>
     )

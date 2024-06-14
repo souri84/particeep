@@ -37,7 +37,7 @@ const initialState: MoviesState = {
 }
 
 export const getMovies = createAsyncThunk<
-    { movies: MovieType[]; categories: string[], totalItems: number},
+    { movies: MovieType[]; categories: string[], totalItems: number },
     string[]
 >('movies/getMovies', async (categories: string[]): Promise<{
     movies: MovieType[];
@@ -130,7 +130,11 @@ export const movieSlice = createSlice({
             .addCase(getMovies.pending, (state) => {
                 state.status = 'loading';
             })
-            .addCase(getMovies.fulfilled, (state, action:PayloadAction<{ movies: MovieType[]; categories: string[]; totalItems: number }>) => {
+            .addCase(getMovies.fulfilled, (state, action: PayloadAction<{
+                movies: MovieType[];
+                categories: string[];
+                totalItems: number
+            }>) => {
                 state.status = 'succeeded';
                 state.movies = action.payload.movies as MovieType[];
                 state.allMovies = action.payload.movies as MovieType[];
