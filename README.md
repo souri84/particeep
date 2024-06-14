@@ -66,6 +66,12 @@ Lance l'application en mode développement :
  pnpm run dev
  ```
 
+Lance les tests :
+
+ ```bash
+pnpm run test
+```
+
 Lance l'application en mode production :
 
  ```bash
