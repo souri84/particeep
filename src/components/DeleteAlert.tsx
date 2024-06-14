@@ -1,7 +1,8 @@
 import {
     Dialog,
     DialogContent,
-    DialogDescription, DialogFooter,
+    DialogDescription,
+    DialogFooter,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
@@ -15,6 +16,7 @@ import {useDispatch} from "react-redux";
 interface DeleteAlertProps {
     movie: MovieType
 }
+
 export default function DeleteAlert({movie}: DeleteAlertProps) {
 
     const dispatch = useDispatch();
@@ -39,7 +41,8 @@ export default function DeleteAlert({movie}: DeleteAlertProps) {
                         <Button variant="outline">Annuler</Button>
                     </DialogTrigger>
                     <DialogTrigger asChild>
-                        <Button variant={"destructive"} onClick={() => dispatch(deleteMovie(movie.id))}>Confirmer</Button>
+                        <Button variant={"destructive"}
+                                onClick={() => dispatch(deleteMovie(movie.id))}>Confirmer</Button>
                     </DialogTrigger>
                 </DialogFooter>
             </DialogContent>

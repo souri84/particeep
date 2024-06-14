@@ -9,7 +9,6 @@ export default function Filmography() {
 
     const start = (pagination.currentPage - 1) * pagination.itemsPerPage;
     const end = start + pagination.itemsPerPage;
-   console.log(movies, pagination.currentPage, start, end)
     const paginatedMovies = movies.slice(start, end);
 
     return (

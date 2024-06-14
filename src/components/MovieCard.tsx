@@ -31,14 +31,14 @@ export default function MovieCard({movie}: MovieCardProps) {
     }, [movie]);
 
     return (
-        <Card className="w-full mx-auto relative">
+        <Card className="w-full mx-auto relative movie">
             <CardHeader>
                 <div className="flex w-full justify-between">
                     <div className="flex flex-col">
                         <CardTitle className="font-bold text-particeep-blue">{movie.title}</CardTitle>
                         <CardDescription className="text-particeep-blue">{movie.category}</CardDescription>
                     </div>
-                    <DeleteAlert movie={movie} />
+                    <DeleteAlert movie={movie}/>
                 </div>
 
 
@@ -54,7 +54,7 @@ export default function MovieCard({movie}: MovieCardProps) {
                         onClick={() => dispatch(dislikeMovie(movie.id))}
                         disabled={votes.includes(movie.id)}
                     >
-                        <ThumbsDownIcon size={24} />
+                        <ThumbsDownIcon size={24}/>
                         <span>{movie.dislikes}</span>
                     </Button>
                     <Button
