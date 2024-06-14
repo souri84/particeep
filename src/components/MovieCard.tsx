@@ -50,7 +50,7 @@ export default function MovieCard({movie}: MovieCardProps) {
                 <div className="flex flex-row-reverse">
                     <Button
                         variant={"outline"}
-                        className="flex gap-2 border-l-0 rounded-l-none text-particeep-blue"
+                        className="flex gap-2 border-l-0 rounded-l-none text-particeep-red"
                         onClick={() => dispatch(dislikeMovie(movie.id))}
                         disabled={votes.includes(movie.id)}
                     >
@@ -59,7 +59,7 @@ export default function MovieCard({movie}: MovieCardProps) {
                     </Button>
                     <Button
                         variant={"outline"}
-                        className="flex gap-2 border-r-0 rounded-r-none text-particeep-red"
+                        className="flex gap-2 border-r-0 rounded-r-none text-particeep-blue"
                         onClick={() => dispatch(likeMovie(movie.id))}
                         disabled={votes.includes(movie.id)}
                     >
